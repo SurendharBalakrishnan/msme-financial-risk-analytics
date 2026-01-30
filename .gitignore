@@ -1,0 +1,42 @@
+# Databricks
+.dbc
+*.dbc
+metastore_db/
+derby.log
+spark-warehouse/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+venv/
+env/
+
+# Data files (don't push large datasets)
+*.csv
+*.xlsx
+*.parquet
+*.json
+*.txt
+!/requirements.txt
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+*.env
+.env.local
+config.json
+credentials.json
