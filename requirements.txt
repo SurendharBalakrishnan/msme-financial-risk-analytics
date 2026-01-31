@@ -1,0 +1,83 @@
+# MSME Financial Risk Analytics - Python Dependencies
+# Project: Databricks Lakehouse ML Pipeline
+# Author: Surendhar Balakrishnan
+# Date: February 2026
+
+# ============================================================================
+# Core Data Processing
+# ============================================================================
+pyspark>=3.4.0
+delta-spark>=2.4.0
+
+# ============================================================================
+# Machine Learning
+# ============================================================================
+# MLflow for experiment tracking
+mlflow>=2.9.0
+
+# Scikit-learn for additional ML utilities
+scikit-learn>=1.3.0
+
+# ============================================================================
+# Data Manipulation & Analysis
+# ============================================================================
+pandas>=2.0.0
+numpy>=1.24.0
+
+# ============================================================================
+# Visualization (for local development)
+# ============================================================================
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+
+# ============================================================================
+# Notebook Support
+# ============================================================================
+ipython>=8.12.0
+jupyter>=1.0.0
+notebook>=6.5.4
+
+# ============================================================================
+# File Handling
+# ============================================================================
+openpyxl>=3.1.0  # Excel file support
+xlrd>=2.0.1      # Legacy Excel format support
+
+# ============================================================================
+# Utilities
+# ============================================================================
+python-dateutil>=2.8.2
+pytz>=2023.3
+
+# ============================================================================
+# Development & Testing (Optional)
+# ============================================================================
+pytest>=7.4.0
+black>=23.3.0
+flake8>=6.0.0
+
+# ============================================================================
+# Notes for Databricks Environment
+# ============================================================================
+# The following packages are pre-installed in Databricks Runtime:
+# - pyspark (cluster runtime version)
+# - pandas, numpy (optimized versions)
+# - matplotlib, seaborn (standard visualization)
+# - mlflow (integrated with workspace)
+#
+# This requirements.txt is primarily for:
+# 1. Local development environment setup
+# 2. Custom Databricks cluster initialization
+# 3. CI/CD pipeline dependencies
+# 4. Documentation of project dependencies
+#
+# For Databricks cluster, you may only need:
+# - delta-spark (if not using DBR with Delta)
+# - openpyxl (for Excel file handling)
+# - Any custom libraries specific to your use case
+#
+# To install on Databricks cluster:
+# 1. Upload to DBFS: /FileStore/requirements.txt
+# 2. Cluster Libraries → Install New → PyPI → requirements.txt
+# Or use cluster init script with: pip install -r requirements.txt
